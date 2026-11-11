@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "skullblocks",
+  "version": "${version}",
+  "name": "SKULLBLOCKS",
+  "description": "Accurate hold-to-place convenience and optional Creative fast breaking. By SKULLKING.",
+  "authors": ["SKULLKING"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/skullblocks/icon.png",
+  "environment": "client",
+  "entrypoints": { "client": ["com.skullking.skullblocks.SkullBlocksClient"] },
+  "depends": { "fabricloader": ">=0.18.0", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*" }
+}
