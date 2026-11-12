@@ -13,6 +13,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.Identifier;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 
@@ -28,7 +29,7 @@ public final class SkullBlocksClient implements ClientModInitializer {
     public void onInitializeClient() {
         SkullBlocksConfig.load();
         openGuiKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.skullblocks.open", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_P, "category.skullblocks"));
+                "key.skullblocks.open", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_P, KeyBinding.Category.create(Identifier.of("skullblocks", "main"))));
         ClientTickEvents.END_CLIENT_TICK.register(this::onClientTick);
     }
 
